@@ -11,7 +11,7 @@
   justify-content: flex-end;
   overflow: hidden;
   position: fixed;
-  right: 0px;
+  left: 0px;
   transition: transform .3s ease-in-out;
   max-width: calc(100% - 16px);
 
@@ -21,7 +21,7 @@
   @include panel-height-fix;
 
   &.closed {
-    transform: translateX(+10%);
+    transform: translateX(-100%);
   }
 
   @include tablet {
@@ -31,7 +31,7 @@
   @include mobile {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     height: 100vh;
     width: 100vw;
     z-index: 95;

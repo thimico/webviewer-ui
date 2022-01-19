@@ -99,25 +99,28 @@ class ToolGroupButton extends React.PureComponent {
     }
 
     return allButtonsInGroupDisabled ? null : (
-      <DataElementWrapper
-        className={classNames({
-          'tool-group-button': true,
-          active: isActive,
-        })}
-        dataElement={dataElement}
-      >
-        <Button
-          title={title}
-          mediaQueryClassName={mediaQueryClassName}
-          isActive={isActive}
-          img={img}
-          color={color}
-          fillColor={fillColor}
-          strokeColor={strokeColor}
-          dataElement={dataElement}
-          onClick={this.onClick}
-        />
-      </DataElementWrapper>
+      <>
+      {/*// <DataElementWrapper*/}
+      {/*//   className={classNames({*/}
+      {/*//     'tool-group-button': true,*/}
+      {/*//     active: isActive,*/}
+      {/*//   })}*/}
+      {/*//   dataElement={dataElement}*/}
+      {/*// >*/}
+      {/*//   <Button*/}
+      {/*//     title={title}*/}
+      {/*//     mediaQueryClassName={mediaQueryClassName}*/}
+      {/*//     isActive={isActive}*/}
+      {/*//     img={img}*/}
+      {/*//     color={color}*/}
+      {/*//     fillColor={fillColor}*/}
+      {/*//     strokeColor={strokeColor}*/}
+      {/*//     dataElement={dataElement}*/}
+      {/*//     onClick={this.onClick}*/}
+      {/*//   ><b>{title}</b></Button>*/}
+      <button type="button" onClick={this.onClick} isActive={isActive} fillColor={fillColor} title={title}>{title}</button><br /><br />
+      {/*// </DataElementWrapper>*/}
+  </>
     );
   }
 }

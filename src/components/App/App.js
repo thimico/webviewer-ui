@@ -120,9 +120,9 @@ const App = ({ removeEventHandlers }) => {
   useEffect(() => {
     const setTabletState = () => {
       // TODO: Use constants
-      dispatch(actions.setLeftPanelWidth(251));
-      dispatch(actions.setNotesPanelWidth(293));
-      dispatch(actions.setSearchPanelWidth(293));
+      // dispatch(actions.setLeftPanelWidth(251));
+      // dispatch(actions.setNotesPanelWidth(293));
+      // dispatch(actions.setSearchPanelWidth(293));
     };
 
     const onBreakpoint = () => {
@@ -136,18 +136,25 @@ const App = ({ removeEventHandlers }) => {
   return (
     <React.Fragment>
       <div className={classNames({ "App": true, 'is-in-desktop-only-mode': isInDesktopOnlyMode })}>
-        <Accessibility />
 
-        <Header />
-        <ToolsHeader />
-        <div className="content">
-          <LeftPanel />
+        <Accessibility />
+        <div className="interface">
+          <div className="left-sidebar">
+            <ToolsHeader />
+        </div>
+
+        <div className="webviewer">
+          <Header />
+          <div className="sidebar">
+            <LeftPanel />
+          </div>
           <DocumentContainer />
           <RightPanel
             dataElement="searchPanel"
             onResize={width => dispatch(actions.setSearchPanelWidth(width))}
           >
-            <SearchPanel />
+            {/*<SearchPanel />*/}
+
           </RightPanel>
           <RightPanel
             dataElement="notesPanel"
@@ -156,15 +163,21 @@ const App = ({ removeEventHandlers }) => {
             <NotesPanel />
           </RightPanel>
         </div>
-        <ViewControlsOverlay />
-        <MenuOverlay />
-        <ZoomOverlay />
-        <AnnotationContentOverlay />
-        <PageManipulationOverlay />
+
+          <div className="right-sidebar">
+            <h2>Form details</h2>
+            <FormFieldEditPopup />
+          </div>
+        </div>
+        {/*<ViewControlsOverlay />*/}
+        {/*<MenuOverlay />*/}
+        {/*<ZoomOverlay />*/}
+        {/*<AnnotationContentOverlay />*/}
+        {/*<PageManipulationOverlay />*/}
         <LeftPanelOverlayContainer />
 
-        <AnnotationPopup />
-        <FormFieldEditPopup />
+        {/*<AnnotationPopup />*/}
+
         <TextPopup />
         <ContextMenuPopup />
         <RichTextPopup />
@@ -187,10 +200,11 @@ const App = ({ removeEventHandlers }) => {
         {core.isFullPDFEnabled() && <SignatureValidationModal />}
       </div>
 
-      <PrintHandler />
-      <FilePickerHandler />
-      <CopyTextHandler />
-      <FontHandler />
+
+      {/*<PrintHandler />*/}
+      {/*<FilePickerHandler />*/}
+      {/*<CopyTextHandler />*/}
+      {/*<FontHandler />*/}
     </React.Fragment>
   );
 };

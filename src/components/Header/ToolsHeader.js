@@ -30,7 +30,7 @@ class ToolsHeader extends React.PureComponent {
       <div
         className={classNames({
           'HeaderToolsContainer': true,
-          'closed': !isVisible,
+          'closed': false,
         })}
         data-element="toolsHeader"
       >

@@ -36,27 +36,27 @@ class LeftPanelTabs extends React.Component {
 
     return (
       <Element className="LeftPanelTabs" dataElement="leftPanelTabs">
-        <Button
-          isActive={this.isActive('thumbnailsPanel')}
-          dataElement="thumbnailsPanelButton"
-          img="icon-panel-thumbnail-line"
-          onClick={() => setActiveLeftPanel('thumbnailsPanel')}
-          title="component.thumbnailsPanel"
-        />
-        <Button
-          isActive={this.isActive('outlinesPanel')}
-          dataElement="outlinesPanelButton"
-          img="icon-panel-outlines"
-          onClick={() => setActiveLeftPanel('outlinesPanel')}
-          title="component.outlinesPanel"
-        />
-        <Button
-          isActive={this.isActive('layersPanel')}
-          dataElement="layersPanelButton"
-          img="ic_layers_24px"
-          onClick={() => setActiveLeftPanel('layersPanel')}
-          title="component.layersPanel"
-        />
+        {/*<Button*/}
+        {/*  isActive={this.isActive('thumbnailsPanel')}*/}
+        {/*  dataElement="thumbnailsPanelButton"*/}
+        {/*  img="icon-panel-thumbnail-line"*/}
+        {/*  onClick={() => setActiveLeftPanel('thumbnailsPanel')}*/}
+        {/*  title="component.thumbnailsPanel"*/}
+        {/*/>*/}
+        {/*<Button*/}
+        {/*  isActive={this.isActive('outlinesPanel')}*/}
+        {/*  dataElement="outlinesPanelButton"*/}
+        {/*  img="icon-panel-outlines"*/}
+        {/*  onClick={() => setActiveLeftPanel('outlinesPanel')}*/}
+        {/*  title="component.outlinesPanel"*/}
+        {/*/>*/}
+        {/*<Button*/}
+        {/*  isActive={this.isActive('layersPanel')}*/}
+        {/*  dataElement="layersPanelButton"*/}
+        {/*  img="ic_layers_24px"*/}
+        {/*  onClick={() => setActiveLeftPanel('layersPanel')}*/}
+        {/*  title="component.layersPanel"*/}
+        {/*/>*/}
         <Button
           isActive={this.isActive('bookmarksPanel')}
           dataElement="bookmarksPanelButton"
@@ -64,13 +64,13 @@ class LeftPanelTabs extends React.Component {
           onClick={() => setActiveLeftPanel('bookmarksPanel')}
           title="component.bookmarksPanel"
         />
-        <Button
-          isActive={this.isActive('signaturePanel')}
-          dataElement="signaturePanelButton"
-          img="icon-tool-signature"
-          onClick={() => setActiveLeftPanel('signaturePanel')}
-          title="component.signaturePanel"
-        />
+        {/*<Button*/}
+        {/*  isActive={this.isActive('signaturePanel')}*/}
+        {/*  dataElement="signaturePanelButton"*/}
+        {/*  img="icon-tool-signature"*/}
+        {/*  onClick={() => setActiveLeftPanel('signaturePanel')}*/}
+        {/*  title="component.signaturePanel"*/}
+        {/*/>*/}
         <Button
           isActive={this.isActive('attachmentPanel')}
           dataElement="attachmentPanelButton"

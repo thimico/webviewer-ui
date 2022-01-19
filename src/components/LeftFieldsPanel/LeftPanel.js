@@ -82,7 +82,7 @@ const LeftPanel = () => {
     e.preventDefault();
   };
 
-  const getDisplay = panel => (panel === activePanel ? 'flex' : 'flex');
+  const getDisplay = panel => (panel === activePanel ? 'flex' : 'none');
 
   let style = {};
   if (isInDesktopOnlyMode || !isMobile) {
@@ -126,10 +126,10 @@ const LeftPanel = () => {
               />
             </div>
           </div>}
-        <div className="left-panel-header">
-          {isThumbnailSelectingPages ? <LeftPanelPageTabs /> : <LeftPanelTabs />}
-        </div>
-        {activePanel === 'thumbnailsPanel' && <ThumbnailsPanel/>}
+        {/*<div /!*className="left-panel-header"*!/>*/}
+        {/*  {isThumbnailSelectingPages ? <LeftPanelPageTabs /> : <LeftPanelTabs />}*/}
+        {/*</div>*/}
+        {/*{activePanel === 'thumbnailsPanel' && <ThumbnailsPanel/>}*/}
         {activePanel === 'outlinesPanel' && <OutlinesPanel />}
         {activePanel === 'bookmarksPanel' && <BookmarksPanel />}
         {activePanel === 'layersPanel' && <LayersPanel />}
